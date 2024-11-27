@@ -1,0 +1,36 @@
+<mvc:View
+    controllerName="worklist.controller.Worklist"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <Page title="Worklist">
+        <headerContent>
+            <Input
+                placeholder="Search..."
+                liveChange="onSearch" />
+        </headerContent>
+        
+        <h1>R</h1>
+        
+        <content>
+            <Table id="table" items="{/zjblessons_base_MaterialsType}">
+                <columns>
+                    <Column>
+                        <Text text="MaterialIDr" />
+                    </Column>
+                    <Column>
+                        <Text text="MaterialDescription" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{MaterialID}" />
+                            <Text text="{MaterialDescription}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>

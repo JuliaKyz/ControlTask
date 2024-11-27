@@ -1,0 +1,47 @@
+<mvc:View
+	controllerName="zjblessons.Worklist.controller.Object"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc">
+
+	<Page
+		showFooter="false"
+	>
+		<customHeader>
+			<Bar>
+				<contentLeft>
+					<Button 
+					icon="spa-icon://nav-back"
+						type="Transparent"
+						press="onNavBack"
+					/>
+						
+					<Title>
+						text="{DocumentNumber}"
+					</Title>
+				</contentLeft>
+				<contentRight>
+					<Button type="Emphasized" press='onPressEdit' text="Edit" icon="sap-icon://edit" visible="{= !${worklistView>/bEditMode}}"/>
+					<Button type="Emphasized" press='onPressSave' icon="sap-icon://save" visible="{= ${worklistView>/bEditMode}}"/>
+					<Button type="Transparent" press='onPressSaveCancel' icon="sap-icon://reset" visible="{= ${worklistView>/bEditMode}}"/>
+						
+				</contentRight>
+			</Bar>
+		</customHeader>
+		<content>
+			<IconTabBar expandable="false headerMode="inline" selectedKey="{= ${objectView>/sSElectTab}}>
+				<items>
+					<IconTabFilter icon="sap-icon://list" key="List" text="{i18n>List}"> 
+						
+					</IconTabFilter>
+					<IconTabFilter icon="sap-icon://form" key="Form" text="{i18n>Form}"> 
+						
+					</IconTabFilter>
+				</items>
+			</IconTabBar>
+		</content>
+	</Page>
+ 
+
+
+
+</mvc:View>

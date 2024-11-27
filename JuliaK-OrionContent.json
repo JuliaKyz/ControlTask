@@ -1,0 +1,14 @@
+{
+    "FullName": "Orion Content",
+    "OrionVersion": 8,
+    "ProjectNames": [
+        "Worklist",
+        "sap.f.tutorial.fiori2.13",
+        "SAPUI5App",
+        "FormRegistration",
+        "ControlTaskKyzyurova"
+    ],
+    "Properties": {},
+    "UniqueId": "JuliaK-OrionContent",
+    "UserId": "JuliaK"
+}
