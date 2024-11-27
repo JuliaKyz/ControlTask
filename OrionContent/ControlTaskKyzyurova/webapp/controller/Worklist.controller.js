@@ -8,16 +8,19 @@ sap.ui.define([
 
     return Controller.extend("zjblessons.Worklist.controller.Worklist", {
         onInit: function() {
-            this._bindTable(); // Привязываем таблицу при инициализации
+            this._bindTable(); 
         },
 
         _bindTable: function() {
-            const oTable = this.getView().byId("table"); // Получаем ссылку на таблицу
+            const oTable = this.getView().byId("table");
 
             oTable.bindItems({
-                path: "/zjblessons_base_MaterialsType", // Убедитесь, что путь правильный
+                path: "/zjblessons_base_MaterialsType", 
                 sorter: [new Sorter('MaterialID', true)],
-                template: this._getTableTemplate()
+                template: this._getTableTemplate(),
+                urlParameters: {
+                    $select: 'MaterialID'
+                },
             });
         },
 
